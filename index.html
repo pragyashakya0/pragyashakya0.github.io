@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>8-bit Games</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,7 +25,7 @@
                         <a href="#about">About</a>
                     </li>
                     <li class= "navItem">
-                        <a href ="#form">Updates</a>
+                        <a href ="#update">Updates</a>
                     </li>
                 </ul>
             </div>
@@ -30,80 +33,164 @@
     </header>
 
 
-    <section id="carousel">
-        <div class="text-box">
-            <h1>Collection of retro games</h1>
-            <p>Play a number of Nintendo 64 classic games</p>
-        </div>
-    </section>
-
-    <section id = "games">
-        <div class= "text">
-            <h1>All the retro games in one place</h1>
+<section class="container">
+    <div id="slideshow">
+        <div class="slides">
+            <img src="img/Slide1.png" id="img">
         </div>
 
-        <div id="gameMenu">
-            <ul>
-                <li class="menu">All Games</li>
-                <li class="menu">Adventure</li>
-                <li class="menu">Action</li>
-                <li class="menu">Arcade</li>
-                <li class="menu">Sports</li>
-                <li class="menu">Strategy</li>
-            </ul>
-        </div>
-        <div id = "gameImg">
-
-        <div class="gameCard"> 
-            <img src="/img/image 5.png">
-        </div>
-        <div class="gameCard">
-            <img src="/img/image 3.png">
-        </div>
-        <div class="gameCard">
-            <img src="/img/pacman.png">
-        </div>
-        <div class="gameCard">
-            <img src="/img/image 3.png">
-        </div>
-        <div class="gameCard">
-            <img src="/img/pacman.png">
-        </div>
-        <div class="gameCard">
-            <img src="/img/image 5.png">
-        </div>
-        <div class="gameCard">
-            <img src="/img/image 3.png">
+        <div class="slides">
+            <img src="img/Slide2.png" id="img">
         </div>
 
+        <div class="slides">
+            <img src="img/Slide3.png" id="img">
         </div>
+    </div>
 
-    </section>
+    <div class="dot">
+        <span class="dotItem"></span>
+        <span class="dotItem"></span>
+        <span class="dotItem"></span>
+    </div>
+
+    <div class="text-box">
+        <h1>Collection of retro games</h1>
+        <p>Play a number of Nintendo 64 classic games</p>
+    </div>
+
+</section>
 
 
 
 
+<section id = "games">
+    <div class= "text">
+        <h1>All the retro games in one place</h1>
+    </div>
 
+    <div id="gameMenu">
+        <ul class="menuList">
+            <li class="menuItem">All Games</li>
+            <li class="menuItem">Adventure</li>
+            <li class="menuItem">Action</li>
+            <li class="menuItem">Arcade</li>
+            <li class="menuItem">Sports</li>
+            <li class="menuItem">Strategy</li>
+        </ul>
+    </div>
+        
+    <div id = "gameImg">
 
-    <section id = "about">
-        <div class= "about-text">
-            <h1>About  8-bit Games</h1>
-            <p>8-Bit games provides free retro games on-site for everyone to play. <br>Bringing back nostalgic memories of NES classic
-            games online.</p>
-        </div>
-
-        <div class="testimonials">
-            <h1>Loved By Everyone</h1>
-            <div class= "testImg">
-                <img src= "img/unsplash_v5OqzkRg3JI.png">
+            <div class="gameCard"> 
+                <img src="/img/image 5.png">
             </div>
-            <div class= "text">
-                <p><b>Retro Game is the best!</b><p><br>
-                <p>Best retro game platform ever. Just click and start playing.<br> Reminds me of my childhood. So nostalgic.</p>
+            <div class="gameCard">
+                <img src="/img/image 3.png">
+            </div>
+            <div class="gameCard">
+                <img src="/img/pacman.png">
+            </div>
+            <div class="gameCard">
+                <img src="/img/image 3.png">
+            </div>
+            <div class="gameCard">
+                <img src="/img/pacman.png">
+            </div>
+            <div class="gameCard">
+                <img src="/img/image 5.png">
+            </div>
+            <div class="gameCard">
+                <img src="/img/image 3.png">
+            </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+<section id="about">
+    <div class="about-us">
+        <div class="about-text">
+            <h1>About 8-bit Games</h1>
+            <p>8-Bit games provides free retro games on-site for everyone to play. <br>Bringing back nostalgic memories
+                of NES classic
+                games online.</p>
+        </div>
+        <div class="about-img">
+            <img src="img/Mario.png" alt="mario">
+        </div>
+    </div>
+
+
+
+    <div class="testimonials">
+        <h1>Loved By Everyone</h1>
+        <div class="slideshow">
+        <div class="testslides">
+            <div class="testImg">
+                <img src="img/person1.png" alt="person1">
+            </div>
+            <div class="text">
+                <p class="name"><b> John Smith </b></p>
+                <img src="/img/Vector.png">
+                <img src="/img/Vector.png">
+                <img src="/img/Vector.png">
+                <img src="/img/Vector.png">
+                <img src="/img/Vector.png">
+                <p><b>Retro Game is the best!</b>
+                <p><br>
+                <p>Best retro game platform ever. Just click and start playing.<br> Reminds me of my childhood. So
+                    nostalgic.</p>
             </div>
         </div>
 
-    </section>
+        <div class="testslides">
+            <div class="testImg">
+                <img src="img/person2.png" alt="person2">
+            </div>
+            <div class="text">
+                <p class="name"><b> John Smith </b></p>
+                <img src="/img/Vector.png">
+                <img src="/img/Vector.png">
+                <img src="/img/Vector.png">
+                <img src="/img/Vector.png">
+                <p><b>Retro Game is the best!</b>
+                <p><br>
+                <p>Best retro game platform ever. Just click and start playing.<br> Reminds me of my childhood. So
+                    nostalgic.</p>
+            </div>
+        </div>
+
+        <div class="testslides">
+            <div class="testImg">
+                <img src="img/person3.png" alt="person1">
+            </div>
+            <div class="text">
+                <p class="name"><b> John Smith </b></p>
+                <img src="/img/Vector.png">
+                <img src="/img/Vector.png">
+                <img src="/img/Vector.png">
+                <p><b>Retro Game is the best!</b>
+                <p><br>
+                <p>Best retro game platform ever. Just click and start playing.<br> Reminds me of my childhood. So
+                    nostalgic.</p>
+            </div>
+        </div>
+        </div>
+
+        <div class="dot">
+            <span class="dotItem"></span>
+            <span class="dotItem"></span>
+            <span class="dotItem"></span>
+        </div>
+    </div>
+
+</section>
 
 
     <section id = "update">
@@ -119,9 +206,33 @@
     </section> 
 
     <footer>
-        <div>
-
+        <div id ="footer">
+            <div class="social-links">
+    
+                <ul>
+                    <li class="social-items">
+                        <a href="https://www.facebook.com" target="_blank">
+                            <img src="img/Vector (1).png">
+                        </a>
+                    </li>
+                    <li class="social-items">
+                        <a href="https://www.instagram.com" target="_blank">
+                            <img src="img/Vector (2).png">
+                        </a>
+                    </li>
+                    <li class="social-items">
+                        <a href="https://twitter.com" target="_blank">
+                            <img src="img/Vector (3).png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="text">
+                Developed By:
+            </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
