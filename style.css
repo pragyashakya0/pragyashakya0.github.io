@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
 
@@ -42,13 +42,12 @@ header {
   text-decoration: none;
   color: #fff;
   font-size: 18px;
-   padding: 0 25px;
+  padding: 0 25px;
 }
 
 .navItem:last-child a {
   padding-right: 0;
 }
-
 
 .container {
   display: flex;
@@ -59,12 +58,12 @@ header {
 }
 
 #slideshow {
-  max-width: 1000px;
+  width:100%;
   position: relative;
   margin: 0;
 }
 
-.slides{
+.slides {
   display: none;
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
@@ -72,23 +71,23 @@ header {
   animation-duration: 1.5s;
 }
 
-#img {
-  width:cover;
+.slide_img {
+  width:100%;
+  width: cover;
   min-height: 70vh;
 }
 
-.dot{
+.dot {
   position: absolute;
   text-align: center;
-   width: 90%;
+  width: 90%;
   top: 95%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
 
-
-.dotItem{
+.dotItem {
   height: 15px;
   width: 15px;
   top: 50px;
@@ -101,7 +100,6 @@ header {
 .active {
   background-color: #717171;
 }
-
 
 .text-box {
   position: absolute;
@@ -122,8 +120,6 @@ header {
   font-size: 24px;
 }
 
-
-
 /*------------------Games---------------*/
 
 #games {
@@ -136,7 +132,7 @@ header {
 #games .text {
   position: absolute;
   top: 30px;
-  left: 50px;
+  padding-left: 50px;
   color: #333333;
   font-size: 30px;
 }
@@ -147,7 +143,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   top: 100px;
-  left: 30px;
+  padding-left: 30px;
 }
 
 #gameMenu .menuItem {
@@ -167,7 +163,7 @@ header {
   flex-direction: row;
   flex-flow: row wrap;
   top: 120px;
-  left: 60px;
+  padding-left: 60px;
   align-content: space-between;
   gap: 50px 50px;
 }
@@ -176,15 +172,13 @@ header {
   border-radius: 10px;
 }
 
-
-
 /*----------------About--------------------*/
 #about {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    
-    position:relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  position: relative;
 }
 
 .about-us {
@@ -252,7 +246,7 @@ header {
   padding-bottom: 10px;
 }
 
-.testslides{
+.testslides {
   display: none;
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
@@ -261,77 +255,76 @@ header {
 }
 
 /*------Update--------*/
- 
-#update{
-    position: relative;
-    background-color: #2C3846;    
-    height: 400px;
+
+#update {
+  position: relative;
+  background-color: #2c3846;
+  height: 400px;
 }
 
-#update h1{
-    font-size: 44px;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    padding-top: 50px;
+#update h1 {
+  font-size: 44px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
 }
 
-#update p{
-    font-size: 18px;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    padding-top: 20px;
+#update p {
+  font-size: 18px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
 }
 
-#update .form{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
+#update .form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-#fname, #email{
-    position: relative;
-    background: #F2F7FF;
-    border-radius: 20px;   
-    margin-top: 20px;
-    padding: 15px 15px;
-    width: 350px;
-    font-size: 18px;
+#fname,
+#email {
+  position: relative;
+  background: #f2f7ff;
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 15px 15px;
+  width: 350px;
+  font-size: 18px;
 }
 
-#btn{
-    position:absolute;
-    background: #3366CC;
-    border-radius: 20px;
-    width: 350px;
-    padding: 15px 15px;
-    margin-top: 20px;
-    font-size:18px;
-    color: #fff;
+#btn {
+  position: absolute;
+  background: #3366cc;
+  border-radius: 20px;
+  width: 350px;
+  padding: 15px 15px;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #fff;
 }
-
 
 /*--------footer-------------*/
 #footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: #2C3846;
-    height: 110px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #2c3846;
+  height: 110px;
 }
 
 #footer .social-links {
-    margin-top: 40px;
-    left:0px;
+  margin-top: 40px;
+  left: 0px;
 }
 .social-items {
   display: inline;
   margin-left: 20px;
-
 }
 #footer .text {
-    color: #fff;
-    margin-top: 30px;
+  color: #fff;
+  margin-top: 30px;
 }
