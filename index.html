@@ -7,14 +7,16 @@
     <title>8-bit Games</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div id="logo">
-                <img src="img/8bit-logo.png">
+                <a href="index.html">
+                    <img src="img/8bit-logo.png">
+                </a>
             </div>
             <div class = "navItems">
                 <ul>
@@ -66,42 +68,48 @@
 
 <section id = "games">
     <div class= "text">
-        <h1>All the retro games in one place</h1>
+        <h2>All the retro games in one place</h2>
     </div>
 
     <div id="gameMenu">
-        <ul class="menuList">
-            <li class="menuItem">All Games</li>
-            <li class="menuItem">Adventure</li>
-            <li class="menuItem">Action</li>
-            <li class="menuItem">Arcade</li>
-            <li class="menuItem">Sports</li>
-            <li class="menuItem">Strategy</li>
-        </ul>
+            <button type="button" class="menuItem active" onclick="gameType(n,type)">All Games</button>
+            <button type="button" class="menuItem" onclick="gameType(n,type)">Adventure</button>
+            <button type="button" class="menuItem" onclick="gameType(n,type)">Action</button>
+            <button type="button" class="menuItem" onclick="gameType(n,type)">Arcade</button>
+            <button type="button" class="menuItem" onclick="gameType(n,type)">Sports</button>
+            <button type="button" class="menuItem" onclick="gameType(n,type)">Strategy</button>
+        
     </div>
         
     <div id = "gameImg">
 
-            <div class="gameCard"> 
-                <img src="/img/image 5.png">
+            <div class="gameCard" data-game-type="action"> 
+                <img src="/img/supermariobros.png">
+                <p>Super Mario Bros.</p>
             </div>
-            <div class="gameCard">
-                <img src="/img/image 3.png">
+            <div class="gameCard" data-game-type="action">
+                <img src="/img/excitebike.png">
+                <p>Excite Bike</p>
             </div>
-            <div class="gameCard">
+            <div class="gameCard" data-game-type="adventure">
                 <img src="/img/pacman.png">
+                <p>Pacman</p>
             </div>
             <div class="gameCard">
-                <img src="/img/image 3.png">
+                <img src="/img/castlevania.png" data-game-type="arcade">
+                <p>Castlevania</p>
             </div>
             <div class="gameCard">
-                <img src="/img/pacman.png">
+                <img src="/img/image 5.png" data-game-type="sports">
+                <p>Duck Hunt</p>
             </div>
             <div class="gameCard">
-                <img src="/img/image 5.png">
+                <img src="/img/image 4.png" data-game-type="strategy">
+                <p>The Legend of Zelda</p>
             </div>
             <div class="gameCard">
-                <img src="/img/image 3.png">
+                <img src="/img/image 3.png" data-game-type="strategy">
+                <p>Mega Man</p>
             </div>
 
     </div>
@@ -116,20 +124,20 @@
 <section id="about">
     <div class="about-us">
         <div class="about-text">
-            <h1>About 8-bit Games</h1>
-            <p>8-Bit games provides free retro games on-site for everyone to play. <br>Bringing back nostalgic memories
+            <h2>About 8-bit Games</h2>
+            <p>8-Bit games provides free retro games on-site for everyone to play.<br>Bringing back nostalgic memories
                 of NES classic
                 games online.</p>
         </div>
         <div class="about-img">
-            <img src="img/Mario.png" alt="mario">
+            <img src="img/pixalatedmario.png" alt="mario">
         </div>
     </div>
 
 
 
     <div class="testimonials">
-        <h1>Loved By Everyone</h1>
+        <h2>Loved By Everyone</h2>
         <div class="slideshow">
         <div class="testslides">
             <div class="testImg">
@@ -142,8 +150,7 @@
                 <img src="/img/Vector.png">
                 <img src="/img/Vector.png">
                 <img src="/img/Vector.png">
-                <p><b>Retro Game is the best!</b>
-                <p><br>
+                <p><b>Retro Game is the best!</b><br>
                 <p>Best retro game platform ever. Just click and start playing.<br> Reminds me of my childhood. So
                     nostalgic.</p>
             </div>
@@ -157,8 +164,7 @@
                 <p class="name"><b> Karen Brown </b></p>
                 <img src="/img/Vector.png">
                 <img src="/img/Vector.png">
-                <p><b>Could be better!</b>
-                <p><br>
+                <p><b>Could be better!</b><br>
                 <p>I don't know why, but this website could be better. I mean <br> I love the games but could be better.</p>
             </div>
         </div>
@@ -174,17 +180,16 @@
                 <img src="/img/Vector.png">
                 <img src="/img/Vector.png">
                 <img src="/img/Vector.png">
-                <p><b>One word! Amazing!</b>
-                <p><br>
+                <p><b>One word! Amazing!</b><br>
                 <p>I think I cried when I played Super Mario. I hope you all <br> add more games.</p>
             </div>
         </div>
         </div>
 
         <div class="dot">
-            <span class="dotItem"></span>
-            <span class="dotItem"></span>
-            <span class="dotItem"></span>
+            <span class="dotItems"></span>
+            <span class="dotItems"></span>
+            <span class="dotItems"></span>
         </div>
     </div>
 
@@ -194,13 +199,19 @@
     <section id = "update">
         <h1>Subscribe to our newsletter</h1>
         <p>and receive updates on new game uploads</p>
-        <div class="form">
-        <form >
-            <input type="text" id="fname" name="name" placeholder="FullName"><br>
-            <input type="text" id="email" name="email" placeholder="Email"><br>
+        
+        <form id="form">
+            <div class="input-icons">
+                <img class="iconInput" src="img/personvector.png" />
+                <input type="text"  name="name" class ="input" placeholder="FullName">
+            </div>
+            <div class="input-icons">
+                <img class="iconInput" src="img/emailvector.png" />
+                <input type="email" name="email" class="input" placeholder="Email">
+            </div>
             <button type="button" id ="btn" name="submit">Subscribe</button>
         </form>
-        </div>
+        
     </section> 
 
     <footer>
