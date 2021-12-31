@@ -72,49 +72,241 @@
     </div>
 
     <div id="gameMenu">
-            <button type="button" class="menuItem active" onclick="gameType(n,type)">All Games</button>
-            <button type="button" class="menuItem" onclick="gameType(n,type)">Adventure</button>
-            <button type="button" class="menuItem" onclick="gameType(n,type)">Action</button>
-            <button type="button" class="menuItem" onclick="gameType(n,type)">Arcade</button>
-            <button type="button" class="menuItem" onclick="gameType(n,type)">Sports</button>
-            <button type="button" class="menuItem" onclick="gameType(n,type)">Strategy</button>
+            <button type="button" class="menuItem active" onclick = "myMenu(0,'allgames')">All Games</button>
+            <button type="button" class="menuItem" onclick = "myMenu(1,'adventure')">Adventure</button>
+            <button type="button" class="menuItem" onclick = "myMenu(2,'action')">Action</button>
+            <button type="button" class="menuItem" onclick = "myMenu(3,'arcade')">Arcade</button>
+            <button type="button" class="menuItem" onclick = "myMenu(4,'sports')">Sports</button>
+            <button type="button" class="menuItem" onclick = "myMenu(5,'strategy')">Strategy</button>
         
     </div>
         
     <div id = "gameImg">
 
-            <div class="gameCard" data-game-type="action"> 
+            <div class="gameCard" id ="marioCard" onclick="gameBtn('0')"data-game-type="action"> 
                 <img src="/img/supermariobros.png">
+                <p class="play-text">Play</p>
                 <p>Super Mario Bros.</p>
+
+                
             </div>
-            <div class="gameCard" data-game-type="action">
-                <img src="/img/excitebike.png">
+            <div class="gameCard" onclick="gameBtn('1')" data-game-type="action">
+                <img src="/img/excitebike.png"> 
+                    <p class="play-text">Play</p>
                 <p>Excite Bike</p>
             </div>
-            <div class="gameCard" data-game-type="adventure">
+            <div class="gameCard" onclick="gameBtn('2')" data-game-type="adventure">
                 <img src="/img/pacman.png">
+                    <p class="play-text">Play</p>
                 <p>Pacman</p>
             </div>
-            <div class="gameCard">
-                <img src="/img/castlevania.png" data-game-type="arcade">
+            <div class="gameCard" onclick="gameBtn('3')" data-game-type="arcade">
+                <img src="/img/castlevania.png">
+                    <p class="play-text">Play</p>
                 <p>Castlevania</p>
             </div>
-            <div class="gameCard">
-                <img src="/img/image 5.png" data-game-type="sports">
+            <div class="gameCard" onclick="gameBtn('4')" data-game-type="sports">
+                <img src="/img/image 5.png" >
+                    <p class="play-text">Play</p>
                 <p>Duck Hunt</p>
             </div>
-            <div class="gameCard">
-                <img src="/img/image 4.png" data-game-type="strategy">
+            <div class="gameCard" onclick="gameBtn('5')" data-game-type="strategy">
+                <img src="/img/image 4.png">
+                    <p class="play-text">Play</p>
                 <p>The Legend of Zelda</p>
             </div>
-            <div class="gameCard">
-                <img src="/img/image 3.png" data-game-type="strategy">
+            <div class="gameCard" onclick="gameBtn('6')" data-game-type="strategy">
+                <img src="/img/image 3.png">
+                    <p class="play-text">Play</p>
                 <p>Mega Man</p>
             </div>
 
     </div>
 
 </section>
+
+
+    <div class="gamePopup"  id="0">
+        <div class="box">
+            
+            <div class="popImg">
+                <img src="img/supermariobros.png">
+            </div>
+            <div class="popText">
+                <div class="gameTitle">
+                    <h3>Super Mario Bros</h3>
+                    <p>Action,Adventure</p>
+                </div>
+    
+    
+                <div class=" gameInfo">
+                    <p><b>NES release date:</b> October 1985</p>
+                    <p><b>Number of players:</b> 2</p>
+                    <p><b>Developer:</b>Nintendo</p>
+                </div>
+    
+                <button type="button"><a href="" target="_blank">Play Game</a></button>
+            </div>
+            <span class="close">&times;</span>
+    
+        </div>
+    </div>
+
+    <div class="gamePopup" id="1">
+        <div class="box">
+    
+            <div class="popImg">
+                <img src="img/excitebike.png">
+            </div>
+            <div class="popText">
+                <div class="gameTitle">
+                    <h3>Excite Bike</h3>
+                    <p>Action,Adventure</p>
+                </div>
+    
+    
+                <div class=" gameInfo">
+                    <p><b>NES release date:</b> October 1985</p>
+                    <p><b>Number of players:</b> 2</p>
+                    <p><b>Developer:</b>Nintendo</p>
+                </div>
+    
+                <button type="button"><a href="" target="_blank">Play Game</a></button>
+            </div>
+            <span class="close">&times;</span>
+    
+        </div>
+    </div>
+
+    <div class="gamePopup" id="2">
+        <div class="box">
+
+            <div class="popImg">
+                <img src="img/pacman.png">
+            </div>
+            <div class="popText">
+                <div class="gameTitle">
+                    <h3>Pacman</h3>
+                    <p>Action,Adventure</p>
+                </div>
+
+
+                <div class=" gameInfo">
+                    <p><b>NES release date:</b> October 1985</p>
+                    <p><b>Number of players:</b> 2</p>
+                    <p><b>Developer:</b>Nintendo</p>
+                </div>
+
+                <button type="button"><a href="" target="_blank">Play Game</a></button>
+            </div>
+            <span class="close">&times;</span>
+
+        </div>
+    </div>
+
+    <div class="gamePopup" id="3">
+        <div class="box">
+    
+            <div class="popImg">
+                <img src="img/castlevania.png">
+            </div>
+            <div class="popText">
+                <div class="gameTitle">
+                    <h3>Castlevania</h3>
+                    <p>Action,Adventure</p>
+                </div>
+    
+    
+                <div class=" gameInfo">
+                    <p><b>NES release date:</b> October 1985</p>
+                    <p><b>Number of players:</b> 2</p>
+                    <p><b>Developer:</b>Nintendo</p>
+                </div>
+    
+                <button type="button"><a href="" target="_blank">Play Game</a></button>
+            </div>
+            <span class="close">&times;</span>
+    
+        </div>
+    </div>
+
+    <div class="gamePopup" id="4">
+        <div class="box">
+    
+            <div class="popImg">
+                <img src="img/image 5.png">
+            </div>
+            <div class="popText">
+                <div class="gameTitle">
+                    <h3>Duck Hunt</h3>
+                    <p>Action,Adventure</p>
+                </div>
+    
+    
+                <div class=" gameInfo">
+                    <p><b>NES release date:</b> October 1985</p>
+                    <p><b>Number of players:</b> 2</p>
+                    <p><b>Developer:</b>Nintendo</p>
+                </div>
+    
+                <button type="button"><a href="" target="_blank">Play Game</a></button>
+            </div>
+            <span class="close">&times;</span>
+    
+        </div>
+    </div>
+
+    <div class="gamePopup" id="5">
+        <div class="box">
+    
+            <div class="popImg">
+                <img src="img/image 4.png">
+            </div>
+            <div class="popText">
+                <div class="gameTitle">
+                    <h3>Legend of Zelda</h3>
+                    <p>Action,Adventure</p>
+                </div>
+    
+    
+                <div class=" gameInfo">
+                    <p><b>NES release date:</b> October 1985</p>
+                    <p><b>Number of players:</b> 2</p>
+                    <p><b>Developer:</b>Nintendo</p>
+                </div>
+    
+                <button type="button"><a href="" target="_blank">Play Game</a></button>
+            </div>
+            <span class="close">&times;</span>
+    
+        </div>
+    </div>
+
+    <div class="gamePopup" id="6">
+        <div class="box">
+    
+            <div class="popImg">
+                <img src="img/image 3.png">
+            </div>
+            <div class="popText">
+                <div class="gameTitle">
+                    <h3>Mega Man</h3>
+                    <p>Action,Adventure</p>
+                </div>
+    
+    
+                <div class=" gameInfo">
+                    <p><b>NES release date:</b> October 1985</p>
+                    <p><b>Number of players:</b> 2</p>
+                    <p><b>Developer:</b>Nintendo</p>
+                </div>
+    
+                <button type="button"><a href="" target="_blank">Play Game</a></button>
+            </div>
+            <span class="close">&times;</span>
+    
+        </div>
+    </div>
 
 
 
@@ -145,11 +337,11 @@
             </div>
             <div class="text">
                 <p class="name"><b> John Smith </b></p>
-                <img src="/img/Vector.png">
-                <img src="/img/Vector.png">
-                <img src="/img/Vector.png">
-                <img src="/img/Vector.png">
-                <img src="/img/Vector.png">
+                <img src="/img/star.png">
+                <img src="/img/star.png">
+                <img src="/img/star.png">
+                <img src="/img/star.png">
+                <img src="/img/star.png">
                 <p><b>Retro Game is the best!</b><br>
                 <p>Best retro game platform ever. Just click and start playing.<br> Reminds me of my childhood. So
                     nostalgic.</p>
@@ -162,8 +354,8 @@
             </div>
             <div class="text">
                 <p class="name"><b> Karen Brown </b></p>
-                <img src="/img/Vector.png">
-                <img src="/img/Vector.png">
+                <img src="/img/star.png">
+                <img src="/img/star.png">
                 <p><b>Could be better!</b><br>
                 <p>I don't know why, but this website could be better. I mean <br> I love the games but could be better.</p>
             </div>
@@ -175,11 +367,11 @@
             </div>
             <div class="text">
                 <p class="name"><b> Rudolf Klinman </b></p>
-                <img src="/img/Vector.png">
-                <img src="/img/Vector.png">
-                <img src="/img/Vector.png">
-                <img src="/img/Vector.png">
-                <img src="/img/Vector.png">
+                <img src="/img/star.png">
+                <img src="/img/star.png">
+                <img src="/img/star.png">
+                <img src="/img/star.png">
+                <img src="/img/star.png">
                 <p><b>One word! Amazing!</b><br>
                 <p>I think I cried when I played Super Mario. I hope you all <br> add more games.</p>
             </div>
@@ -197,6 +389,7 @@
 
 
     <section id = "update">
+        <div id = "newsletter">
         <h1>Subscribe to our newsletter</h1>
         <p>and receive updates on new game uploads</p>
         
@@ -209,8 +402,15 @@
                 <img class="iconInput" src="img/emailvector.png" />
                 <input type="email" name="email" class="input" placeholder="Email">
             </div>
-            <button type="button" id ="btn" name="submit">Subscribe</button>
+            <button type="button" id ="btn" name="submit" onclick="subscribe()">Subscribe</button>
         </form>
+        </div>
+
+        <div id="subscribe">
+            <img src="img/donevector.png">
+            <p>Thank You</p>
+            <p>You are now subscribed to newsletter.</p>
+        </div>
         
     </section> 
 
