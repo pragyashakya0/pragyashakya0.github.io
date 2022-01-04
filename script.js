@@ -79,9 +79,13 @@ function gameBtn(id){
     let modalId = modal[i].id;
     if(id === modalId){
     modal[i].style.display ="block";
+      
+      if(modal[i]){
 
-    closeBtn.onclick = function(){
-    modal[i].style.display ="none";
+      closeBtn.onclick = function(){
+      modal[i].style.display ="none";
+      }
+
 }
 
 
