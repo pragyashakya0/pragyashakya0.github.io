@@ -7,10 +7,6 @@ export function Header() {
 }
   return (
       <div className="logo">
-        <img src = {logo.logoimg}
-        />
-        
-        
 
       </div>
   )

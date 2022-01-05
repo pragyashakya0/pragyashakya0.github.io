@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import slide1 from "../img/Slide1.png"
 import slide2 from "../img/Slide2.png"
 import slide3 from "../img/Slide3.png"
@@ -23,6 +23,14 @@ const images = [
 
 export function Slider(){
   const [Index, setIndex] = useState(0);
+  useEffect(()=> {
+    const Timer = setInterval(()=>{
+      setIndex((i) => (i+1) % images.length);
+    },3000);
+    return() => {
+      clearInterval(Timer);
+    }
+  },[]);
   return (
     <section className='container'>
       {images.map((image,id)=>{

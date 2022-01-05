@@ -1,9 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
 import { Header } from './components';
 import { Slider } from './components';
 import { GameCard } from './components';
-import { gameList } from './data.js';
+import { About } from './components';
+import { Review } from './components';
+import { gameList, about, testimonials } from './data.js';
+
 
 
 function App() {
@@ -12,22 +14,11 @@ function App() {
       <Header />
       <Slider />
       <GameCard games = { gameList }/>
+      <section className='about'>
+      <About about = { about } />
+      <Review testimonials = { testimonials.testimonial } title={testimonials.title}/>
+      </section>
      
-     
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
     </div>
   );
 }
