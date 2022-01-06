@@ -65,29 +65,35 @@ export const about = {
 export const testimonials = {
   title:"Loved by Everyone",
   testimonial:[
-  {
-  reviewtitle: "Retro Game is the best!",
-  review: "Best retro game platform ever. Just click and start playing. Reminds me of my childhood. So nostalgic.",
-  image: {
-    src: person1,
-    name: "John Smith"
+    {
+      id:0,
+      reviewtitle: "Retro Game is the best!",
+      review: "Best retro game platform ever. Just click and start playing. Reminds me of my childhood. So nostalgic.",
+      image: {
+        src: person1,
+        name: "John Smith"
+      },
+      rating: 4
+    },
+    {
+      id:1,
+      reviewtitle: "Could be better!",
+      review: "I don't know why, but this website could be better. I mean I love the games but could be better.",
+      image: {
+        src: person2,
+        name: "Karen Brown"
+      },
+      rating:3
+    },
+    {
+      id:2,
+      reviewtitle: "One word! Amazing!",
+      review: "I think I cried when I played Super Mario. I hope you all add more games.",
+      image: {
+        src: person3,
+        name: "Rudolf Kilnman"
+      },
+      rating: 5
     }
-  },
-  {
-  reviewtitle: "Could be better!",
-  review: "I don't know why, but this website could be better. I mean I love the games but could be better.",
-  image: {
-    src: person2,
-    name: "Karen Brown"
-    }
-  },
-  {
-  reviewtitle: "One word! Amazing!",
-  review: "I think I cried when I played Super Mario. I hope you all add more games.",
-  image: {
-    src: person3,
-    name: "Rudolf Kilnman"
-    }
-  }
   ]
 }

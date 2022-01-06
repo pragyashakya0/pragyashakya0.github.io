@@ -1,3 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #2c3846;
+  width: 100%;
+  min-height: 80px;
+  position: fixed;
+  z-index: 5;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 80px;
+}
+
+.logo img {
+  width: 30px;
+  height: 30px;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.navItem {
+  display: inline-block;
+  color: #fff;
+}
+
+.navItem a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 0 25px;
+}
+
+.navItem:last-child a {
+  padding-right: 0;
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -12,7 +63,7 @@
   margin: 0;
 }
 
-img {
+.slideshow img {
   width: 100%;
 }
 
@@ -117,6 +168,7 @@ img {
   text-align: center;
 }
 
+/*-------------------About---------------------*/
 .about {
   display: flex;
   flex-direction: column;
@@ -134,32 +186,36 @@ img {
   padding-bottom: 80px;
 }
 
-.about-us .about-text {
+.about-text {
   color: #fff;
   padding-top: 50px;
   padding-left: 120px;
 }
 
-.about-us .about-text h2 {
+.about-text h2 {
   font-size: 44px;
   padding-bottom: 20px;
 }
 
-.about-us .about-text p {
+.about-text p {
   font-size: 18px;
 }
 
-.about-us .about-img {
+.about-img {
   position: absolute;
-  right: 200px;
-  width: 200px;
-  height: 200 px;
-  /* top: -8em; */
+  width: 100%;
   transition: 0.5s;
 }
 
 .about-img:hover {
   top: -8em;
+}
+
+.about-img img {
+  width: 350px;
+  height: 250px;
+  margin-left: 950px;
+  margin-bottom: 10px;
 }
 
 .testimonialreview {
@@ -176,15 +232,13 @@ img {
   color: #333333;
 }
 
-.testimonialreview .testImg {
+.reviewImg {
   display: flex;
   justify-content: center;
-  width: 200px;
-  margin-left: 560px;
   margin-top: 100px;
 }
 
-.testimonialreview .text {
+.reviewtext {
   position: relative;
   text-align: center;
   margin-top: 50px;
@@ -192,27 +246,37 @@ img {
   color: #666666;
 }
 
-.text .name {
+.reviewname {
   color: #333333;
   padding-bottom: 10px;
 }
 
-.dot {
-  position: absolute;
-  text-align: center;
-  width: 90%;
-  top: 95%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+/*--------footer-------------*/
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #2c3846;
+  padding: 10px;
+  border-top: 1px solid rgb(255, 255, 255);
 }
 
-.dotItems {
-  height: 15px;
-  width: 15px;
-  top: 50px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.5s ease;
+.footer .links {
+  margin-top: 40px;
+  padding-left: 0px;
+}
+
+.items {
+  display: inline;
+  margin-left: 20px;
+}
+
+.social-items:hover {
+  background-color: blue;
+}
+
+.footer-text {
+  color: #fff;
+  margin-top: 30px;
 }
