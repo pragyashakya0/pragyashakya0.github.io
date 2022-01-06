@@ -1,52 +1,30 @@
-const gameTypes = [
-  {
-    id:0,
-    name: "All Games"
-  },
-  {
-    id:1,
-    name: "Adventure"
-  },
-  {
-    name: "Action"
-  },
-  {
-    name: "Arcade"
-  },
-  {
-    name: "Sports"
-  },
-  {
-    name: "Strategy"
-  }
-]
+import { useState } from "react";
 
-export function GameCard({games}){
-  return ( 
-    <div className='games' id="games">
-      <h2>All the retro games in one place</h2>
+function showGames(category, selectedCategory) {
+  if (selectedCategory === "All Games") return "block";
+  if (category === selectedCategory) return "block";
+  return "none";
+}
 
-      <div className = 'gameMenu'>
-        {gameTypes.map((menu) => {
-          return (
-            <button type='button' className='menuItem'>{menu.name}</button>
-          )
-        })}
-      </div>
-
-      <div className='gameImg'>
-        {games.map((game) => {
-          return (
-          <div className = "gameCard">
+export function GameCard({games,category}){
+  const [popUp,setPopup] = useState(" ");
+  return(
+    <div className='gameImg'>
+      {games.map((game) => {
+        return (
+          <div className = "gameCard" style={{ display : showGames(game.category,category) }}>
             <img src = {game.image} 
             id = {game.id} 
             alt = {game.name}
+            onClick={()=> setPopup(game.name)}
+            
             />
+            <p className="play-text">Play</p>
             <p>{game.name}</p>
           </div>
-          );
-          })}
-      </div>
+        );
+      })}
     </div>
-  );
+  )
 }
+

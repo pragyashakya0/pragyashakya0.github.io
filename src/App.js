@@ -1,27 +1,40 @@
 import './App.css';
 import { Navbar } from './components';
 import { Slider } from './components';
-import { GameCard } from './components';
+import { Games } from './components';
+import { PopUp } from './components';
 import { About } from './components';
 import { Review } from './components';
 import { Footer } from './components';
-import { gameList, about, testimonials } from './data.js';
+import { 
+  logo,
+  navItems,
+  gameTypes,
+  gameList, 
+  popCard,
+  about, 
+  testimonials,
+  footerItems
+} from './data.js';
 
 
 
 function App() {
   return (
     <div className="App">
-      <header>
-        <Navbar />
-      </header>
+      <Navbar logo={logo} navItems={navItems}/>
       <Slider />
-      <GameCard games = { gameList }/>
+      <Games gameTypes={gameTypes} games={gameList}/>
+      <PopUp 
+        gameInfo={gameList} 
+        play={popCard.buttonText}
+        info={popCard.infoText}
+      />
       <section className='about' id="about">
-        <About about = { about } />
-        <Review testimonials = { testimonials.testimonial } title={testimonials.title}/>
+        <About about = {about} />
+        <Review testimonials = {testimonials.testimonial} title={testimonials.title}/>
       </section>
-      <Footer />
+      <Footer footerItems={footerItems}/>
        
     </div>
   );

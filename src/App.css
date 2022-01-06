@@ -139,9 +139,7 @@ header {
   border: none;
 }
 
-.active,
 .menuItem:hover {
-  background-color: #4986ff;
   color: #fff;
 }
 
@@ -166,6 +164,26 @@ header {
 
 .gameCard p {
   text-align: center;
+}
+
+.play-text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+}
+
+.gameCard img:hover {
+  opacity: 0.5;
+}
+
+.gameCard img:hover + .play-text {
+  opacity: 1;
+  transition: 0.2s ease;
 }
 
 /*-------------------About---------------------*/
@@ -203,21 +221,104 @@ header {
 
 .about-img {
   position: absolute;
-  width: 100%;
+  right: 200px;
+  width: 200px;
+  height: 200px;
+  bottom: 100px;
   transition: 0.5s;
 }
 
-.about-img:hover {
+/* .about-img:hover {
   top: -8em;
+} */
+
+/*--===========================---*/
+
+.gamePopup {
+  position: fixed;
+  display: none;
+  overflow: auto;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
-.about-img img {
-  width: 350px;
-  height: 250px;
-  margin-left: 950px;
-  margin-bottom: 10px;
+.box {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid rgb(158, 135, 135);
+  border-radius: 10px;
+  column-gap: 20px;
+  padding: 10px;
+  width: 1000px;
+  height: 440px;
+  background-color: #fff;
 }
 
+.popImg img {
+  width: 500px;
+  padding: 30px 20px;
+}
+
+.popText {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.gameTitle h3 {
+  color: #333333;
+  font-size: 24px;
+  font-weight: 500;
+}
+.gameTitle p {
+  color: #3366cc;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.gameInfo {
+  padding-top: 30px;
+  padding-bottom: 40px;
+  color: #333333;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.popText button {
+  background-color: #3366cc;
+  border-radius: 10px;
+  width: 150px;
+  outline: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.popText button:focus {
+  outline: none;
+}
+
+.popText button {
+  border: none;
+}
+
+.popText button a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/*------testimonials-----------*/
 .testimonialreview {
   background-color: #fff;
   position: relative;
@@ -267,7 +368,7 @@ header {
   padding-left: 0px;
 }
 
-.items {
+.item {
   display: inline;
   margin-left: 20px;
 }
