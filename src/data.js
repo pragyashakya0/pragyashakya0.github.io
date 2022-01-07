@@ -10,6 +10,8 @@ import flyingmario from './img/pixalatedmario.png';
 import person1 from './img/person1.png';
 import person2 from './img/person2.png';
 import person3 from './img/person3.png';
+import humanicon from './img/personvector.png';
+import emailicon from './img/emailvector.png';
 import facebook from './img/vector1.png';
 import instagram from './img/vector2.png';
 import twitter from './img/vector3.png';
@@ -35,84 +37,86 @@ export const navItems = [
   }
 ]
 
-export const gameTypes = [
-  {
-    id:0,
-    name: "All Games"
-  },
-  {
-    id:1,
-    name: "Adventure"
-  },
-  {
-    id:2,
-    name: "Action"
-  },
-  {
-    id:3,
-    name: "Arcade"
-  },
-  {
-    id:4,
-    name: "Sports"
-  },
-  {
-    id:5,
-    name: "Strategy"
-  }
-]
+// export const gameTypes = [
+//   {
+//     id:0,
+//     name: "All Games"
+//   },
+//   {
+//     id:1,
+//     name: "Adventure"
+//   },
+//   {
+//     id:2,
+//     name: "Action"
+//   },
+//   {
+//     id:3,
+//     name: "Arcade"
+//   },
+//   {
+//     id:4,
+//     name: "Sports"
+//   },
+//   {
+//     id:5,
+//     name: "Strategy"
+//   }
+// ]
 
-export const gameList = 
-[
-    {
-      id:0,
-      image:mario,
-      name:"Super Mario",
-      category:"Adventure",
-      dateInfo:"October 1985",
-      playerInfo: 2,
-      developerInfo:"Nintendo"
-    },
+// export const gameList = 
+// [
+//     {
+//       id:0,
+//       image:mario,
+//       name:"Super Mario",
+//       category:"Adventure",
+//       dateInfo:"October 1985",
+//       playerInfo: 2,
+//       developerInfo:"Nintendo"
+//     },
 
-    {
-      id:1,
-      image:excitebike,
-      name:"Excite Bike",
-      category:"Action"
-    },
+//     {
+      // id:1,
+      // image:excitebike,
+      // name:"Excite Bike",
+      // category:"Action"
+//     },
 
-    { 
-      id:2,
-      image:pacman,
-      name:"Pacman",
-      category:"Strategy"
-    },
-    {
-      id:3,
-      image: castlevania,
-      name: "Castlevania",
-      category:"Arcade"
-    },
-    {
-      id:4,
-      image: duckhunt,
-      name: "Duck Hunt",
-      category:"Sports"
-    },
-    {
-      id:5,
-      image: zelda,
-      name: "The Legend of Zelda",
-      category:"Arcade"
+//     { 
+//       id:2,
+//       image:pacman,
+//       name:"Pacman",
+//       category:"Strategy"
+//     },
+//     {
+//       id:3,
+//       image: castlevania,
+//       name: "Castlevania",
+//       category:"Arcade"
+//     },
+//     {
+//       id:4,
+//       image: duckhunt,
+//       name: "Duck Hunt",
+//       category:"Sports"
+//     },
+//     {
+//       id:5,
+//       image: zelda,
+//       name: "The Legend of Zelda",
+//       category:"Arcade"
 
-    },
-    {
-      id:6,
-      image: megaman,
-      name: "Mega Man",
-      category:"Strategy"
-    }
-];
+//     },
+//     {
+//       id:6,
+//       image: megaman,
+//       name: "Mega Man",
+//       category:"Strategy"
+//     }
+// ];
+
+
 
 export const popCard = {
   buttonText:"Play Game",
@@ -172,6 +176,27 @@ export const testimonials = {
   ]
 }
 
+
+export const newsletter = {
+  title:"Subscribe to our newsletter",
+  subtitle:"and receive updates on new game uploads",
+  form:[
+    {
+      icon:humanicon,
+      text:"Fullname"
+    },
+    {
+      icon:emailicon,
+      text:"Email"
+    }
+  ],
+  buttonText:"Subscribe",
+  submit:{
+    title:"Thank You",
+    subtext: "You are now subscribed to newsletter."
+  }
+}
+
 export const footerItems = [
   {
     image:facebook,
@@ -189,3 +214,162 @@ export const footerItems = [
     name:"twitter"
   }
 ]
+
+
+export const games = [
+   {
+    id: 0,
+    type: "All Games",
+    items: [
+      {
+        name: "Mario",
+        image: {
+          src: mario,
+          alt: "Super Mario Bros"
+        }
+      },
+      {
+        name:"Excite Bike",
+        image: {
+          src: excitebike,
+          alt: "Excite Bike"
+        }
+      },
+      {
+        name: "Pacman",
+        image: {
+          src: pacman,
+          alt: "Pacman"
+        }
+      },
+      {
+        name: "Castlevania",
+        image:{
+          src: castlevania,
+          alt: "Castlevania"
+        }
+      },
+      {
+        name: "Duck Hunt",
+        image:{
+          src:duckhunt,
+          alt:"Duck Hunt"
+        }
+      },
+      {
+        name: "The Legend of Zelda",
+        image:{
+          src:zelda,
+          alt:"The Legend of Zelda"
+        }
+      },
+      {
+        name:"Mega Man",
+        image:{
+          src:megaman,
+          alt:"Mega Man"
+        }
+      }
+    ]
+  },
+  {
+    id: 1,
+    type: "Action",
+    items: [
+      {
+        name: "Mario",
+        image: {
+          src: mario,
+          alt: "Super Mario Bros"
+        }
+      },
+      {
+        name: "Pacman",
+        image: {
+          src: pacman,
+          alt: "Pacman"
+        }
+      }
+    ]
+  },
+  {
+    id: 2,
+    type: "Adventure",
+    items: [
+      {
+        name: "MegaMan",
+        image:{
+          src: megaman,
+          alt:"Megaman"
+        }
+      },
+      {
+        name: "The Legend of Zelda",
+        image: {
+          src: zelda,
+          alt:"The Legend of Zelda"
+        }
+      }
+    ]
+  },
+  {
+    id: 3,
+    type: "Strategy",
+    items: [
+      {
+        name: "MegaMan",
+        image:{
+          src: megaman,
+          alt:"Megaman"
+        }
+      },
+      {
+        name: "Duck Hunt",
+        image: {
+          src:duckhunt,
+          alt:"Duck Hunt"
+        }
+      }
+    ]
+  },
+  {
+    id: 4,
+    type: "Arcade",
+    items: [
+      {
+        name: "Pacman",
+        image:{
+          src: pacman,
+          alt:"Pacman"
+        }
+      },
+      {
+        name: "Castlevania",
+        image: {
+          src:castlevania,
+          alt:"Castlevania"
+        }
+      }
+    ]
+  },
+  {
+    id: 5,
+    type: "Sports",
+    items: [
+      {
+        name: "Magaman",
+        image:{
+          src: megaman,
+          alt:"Megaman"
+        }
+      },
+      {
+        name: "Duck Hunt",
+        image: {
+          src: duckhunt,
+          alt:"Duck Hunt"
+        }
+      }
+    ]
+  }
+];

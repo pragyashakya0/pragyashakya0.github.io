@@ -187,13 +187,6 @@ header {
 }
 
 /*-------------------About---------------------*/
-.about {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
-  padding-top: 100px;
-}
 
 .about-us {
   position: relative;
@@ -201,6 +194,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-top: 100px;
   padding-bottom: 80px;
 }
 
@@ -244,8 +238,8 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 2;
-  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 6;
+  background-color: rgba(221, 205, 205, 0.1);
   cursor: pointer;
 }
 

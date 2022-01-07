@@ -1,29 +1,25 @@
-export function PopUp({gameInfo,play,info}){
+export function Modal({pop,play,info}){
   return(
     <div className="gamePopup">
-      {gameInfo.map((game)=> {
-        return(
           <div className="box">
             <div className="popImg">
-              <img src={game.image}/>
+              <img src={pop.image}/>
             </div>
             <div className="popText">
               <div className="gameTitle">
-                <h3>{game.name}</h3>
-                <p>{game.category}</p>
+                <h3>{pop.name}</h3>
+                <p>{pop.category}</p>
               </div>
               <div className="gameInfo">
-                <p>{info.date}:{game.dateInfo}</p>
-                <p>{info.number}:{game.playerInfo}</p>
-                <p>{info.developer}:{game.developerInfo}</p>
+                <p>{info.date}:{pop.dateInfo}</p>
+                <p>{info.number}:{pop.playerInfo}</p>
+                <p>{info.developer}:{pop.developerInfo}</p>
               </div>
               <button type="button">
                 <a href="" target="_blank">{play}</a>
               </button>
             </div>
-          </div>
-        )
-      })}
+          </div> 
     </div>
   )
 }

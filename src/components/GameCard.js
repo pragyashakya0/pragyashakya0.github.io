@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Modal } from './Modal'
+// import { popCard } from '../data';
 
 function showGames(category, selectedCategory) {
   if (selectedCategory === "All Games") return "block";
@@ -7,7 +9,7 @@ function showGames(category, selectedCategory) {
 }
 
 export function GameCard({games,category}){
-  const [popUp,setPopup] = useState(" ");
+  const [modal,setModal] = useState(false);
   return(
     <div className='gameImg'>
       {games.map((game) => {
@@ -16,14 +18,17 @@ export function GameCard({games,category}){
             <img src = {game.image} 
             id = {game.id} 
             alt = {game.name}
-            onClick={()=> setPopup(game.name)}
-            
+            onClick={()=> setModal(game)}
             />
             <p className="play-text">Play</p>
             <p>{game.name}</p>
           </div>
+          
         );
       })}
+      {
+        modal ? ( <Modal onClose={() => setModal(null)} item={modal} />) : null
+      }
     </div>
   )
 }

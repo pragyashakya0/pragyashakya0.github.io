@@ -1,6 +1,6 @@
 export function About({about}){
   return(
-    <div className="about-us">
+    <div className="about-us" id="about">
       <div className="about-text">
         <h2>{about.title}</h2>
         <p>{about.description}</p>
