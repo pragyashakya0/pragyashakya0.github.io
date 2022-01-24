@@ -1,4 +1,7 @@
 import logoimg from "./img/8bit-logo.png"
+import slide1 from "./img/Slide1.png"
+import slide2 from "./img/Slide2.png"
+import slide3 from "./img/Slide3.png"
 import mario from './img/supermariobros.png';
 import excitebike from './img/excitebike.png';
 import pacman from './img/pacman.png';
@@ -36,6 +39,29 @@ export const navItems = [
     url: "#update"
   }
 ]
+
+export const sliderImages = [
+  {
+    id:0,
+    name: "slide_1",
+    src : slide1
+  },
+  {
+    id:1,
+    name: "slide_2",
+    src : slide2
+  },
+  {
+    id:2,
+    name: "slide_3",
+    src: slide3
+  }
+]
+
+export const sliderText = {
+  title: "Collection of retro games",
+  subtitle: "Play a number of Nintendo 64 classic games"
+}
 
 // export const gameTypes = [
 //   {
@@ -117,20 +143,6 @@ export const navItems = [
 // ];
 
 
-
-export const popCard = {
-  buttonText:"Play Game",
-  infoText:{
-    date: "NES release date:",
-    number: "Number of players",
-    developer: "Developer"
-    }
-    // close:{
-    //   image:close,
-    //   name:close
-    //  }
-  }
-
 export const about = {
   title: "About 8-bit Games",
   description: "8-Bit games provides free retro games on-site for everyone to play.Bringing back nostalgic memories of NES classic games online",
@@ -183,11 +195,13 @@ export const newsletter = {
   form:[
     {
       icon:humanicon,
-      text:"Fullname"
+      text:"Fullname",
+      type:"text"
     },
     {
       icon:emailicon,
-      text:"Email"
+      text:"Email",
+      type:"email"
     }
   ],
   buttonText:"Subscribe",
@@ -226,49 +240,70 @@ export const games = [
         image: {
           src: mario,
           alt: "Super Mario Bros"
-        }
+        },
+        releaseDate: "January 1985",
+        developer: "Nintendo",
+        numofPlayers: 2
       },
       {
         name:"Excite Bike",
         image: {
           src: excitebike,
           alt: "Excite Bike"
-        }
+        },
+        releaseDate: "January 1985",
+        developer: "Nintendo",
+        numofPlayers: 2
       },
       {
         name: "Pacman",
         image: {
           src: pacman,
           alt: "Pacman"
-        }
+        },
+        releaseDate: "January 1985",
+        developer: "Nintendo",
+        numofPlayers: 2
       },
       {
         name: "Castlevania",
         image:{
           src: castlevania,
           alt: "Castlevania"
-        }
+        },
+        releaseDate: "January 1985",
+        developer: "Nintendo",
+        numofPlayers: 2
       },
       {
         name: "Duck Hunt",
         image:{
           src:duckhunt,
           alt:"Duck Hunt"
-        }
+        },
+        releaseDate: "January 1985",
+        developer: "Nintendo",
+        numofPlayers: 2
       },
       {
         name: "The Legend of Zelda",
         image:{
           src:zelda,
           alt:"The Legend of Zelda"
-        }
+        },
+        releaseDate: "January 1985",
+        developer: "Nintendo",
+        numofPlayers: 2
       },
       {
         name:"Mega Man",
         image:{
           src:megaman,
           alt:"Mega Man"
-        }
+        },
+        releaseDate: "January 1985",
+        developer: "Nintendo",
+        numofPlayers: 2
       }
     ]
   },
@@ -281,14 +316,20 @@ export const games = [
         image: {
           src: mario,
           alt: "Super Mario Bros"
-        }
+        },
+        releaseDate: "January 1985",
+        developer: "Nintendo",
+        numofPlayers: 2
       },
       {
         name: "Pacman",
         image: {
           src: pacman,
           alt: "Pacman"
-        }
+        },
+        releaseDate: "January 1985",
+        developer: "Nintendo",
+        numofPlayers: 2
       }
     ]
   },
@@ -301,14 +342,20 @@ export const games = [
         image:{
           src: megaman,
           alt:"Megaman"
-        }
+        },
+        releaseDate: "January 1985",
+        developer: "Nintendo",
+        numofPlayers: 2
       },
       {
         name: "The Legend of Zelda",
         image: {
           src: zelda,
           alt:"The Legend of Zelda"
-        }
+        },
+        releaseDate: "January 1985",
+        developer: "Nintendo",
+        numofPlayers: 2
       }
     ]
   },
@@ -321,14 +368,20 @@ export const games = [
         image:{
           src: megaman,
           alt:"Megaman"
-        }
+        },
+        releaseDate: "January 1985",
+        developer: "Nintendo",
+        numofPlayers: 2
       },
       {
         name: "Duck Hunt",
         image: {
           src:duckhunt,
           alt:"Duck Hunt"
-        }
+        },
+        releaseDate: "January 1985",
+        developer: "Nintendo",
+        numofPlayers: 2
       }
     ]
   },
@@ -341,14 +394,20 @@ export const games = [
         image:{
           src: pacman,
           alt:"Pacman"
-        }
+        },
+        releaseDate: "January 1985",
+        developer: "Nintendo",
+        numofPlayers: 2
       },
       {
         name: "Castlevania",
         image: {
           src:castlevania,
           alt:"Castlevania"
-        }
+        },
+        releaseDate: "January 1985",
+        developer: "Nintendo",
+        numofPlayers: 2
       }
     ]
   },
@@ -361,14 +420,20 @@ export const games = [
         image:{
           src: megaman,
           alt:"Megaman"
-        }
+        },
+        releaseDate: "January 1985",
+        developer: "Nintendo",
+        numofPlayers: 2
       },
       {
         name: "Duck Hunt",
         image: {
           src: duckhunt,
           alt:"Duck Hunt"
-        }
+        },
+        releaseDate: "January 1985",
+        developer: "Nintendo",
+        numofPlayers: 2
       }
     ]
   }

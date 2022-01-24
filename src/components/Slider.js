@@ -1,32 +1,6 @@
 import { useEffect, useState } from 'react'
-import slide1 from "../img/Slide1.png"
-import slide2 from "../img/Slide2.png"
-import slide3 from "../img/Slide3.png"
 
-const images = [
-  {
-    id:0,
-    name: "slide_1",
-    src : slide1
-  },
-  {
-    id:1,
-    name: "slide_2",
-    src : slide2
-  },
-  {
-    id:2,
-    name: "slide_3",
-    src: slide3
-  }
-]
-
-const text = {
-  title: "Collection of retro games",
-  subtitle: "Play a number of Nintendo 64 classic games"
-}
-
-export function Slider(){
+export function Slider({images,text}){
   const [index, setIndex] = useState(0);
   useEffect(()=> {
     const Timer = setInterval(()=>{

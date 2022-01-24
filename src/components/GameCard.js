@@ -1,35 +1,27 @@
 import { useState } from "react";
 import { Modal } from './Modal'
-// import { popCard } from '../data';
 
-function showGames(category, selectedCategory) {
-  if (selectedCategory === "All Games") return "block";
-  if (category === selectedCategory) return "block";
-  return "none";
-}
-
-export function GameCard({games,category}){
-  const [modal,setModal] = useState(false);
+export function GameCard({card,collection}){
+  const [modal,setModal] = useState(false)
   return(
-    <div className='gameImg'>
-      {games.map((game) => {
-        return (
-          <div className = "gameCard" style={{ display : showGames(game.category,category) }}>
-            <img src = {game.image} 
-            id = {game.id} 
-            alt = {game.name}
-            onClick={()=> setModal(game)}
-            />
-            <p className="play-text">Play</p>
-            <p>{game.name}</p>
-          </div>
-          
-        );
-      })}
-      {
-        modal ? ( <Modal onClose={() => setModal(null)} item={modal} />) : null
-      }
-    </div>
+    <div className = "gameCard">
+      <img {...card.image}
+        onClick={() => {
+          setModal(true)
+        }}
+      />
+      <p className="play-text">Play</p>
+      <p>{card.name}</p>
+      <Modal 
+        name= {card.name}
+        gametype={collection.type}
+        image={card.image} 
+        modal = {modal}
+        setModal ={setModal} 
+        releaseDate={card.releaseDate}
+        developerInfo={card.developer}
+        playersInfo={card.numOfPlayers}
+      />
+    </div>  
   )
 }
-

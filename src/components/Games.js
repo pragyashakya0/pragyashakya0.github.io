@@ -1,77 +1,36 @@
 import { useState } from "react";
+import { GameCard } from "./GameCard";
 
-export function Games({menu,defaultValue=0,}){
+export function Games({collections}){
   const title = "All the retro games in one place"
-  const [state,setstate] = useState(defaultValue)
-  const foundGameCard = menu.find((game,index) => index === state);
-  console.log(foundGameCard.items)
-  
+  const [state,setstate] = useState(0)
+  const foundGameCard = collections.find((collection,idx) => idx === state);
   return(
     <div className="games">
       <div className = "text">
         <h2>{title}</h2>
       </div>
       <div className="gameMenu">
-      {menu.map((game,id) =>{
+      {collections.map((collection,id) =>{
         return(
-          <Button title = {game.type} myMenu={() => setstate(id)}/> 
+            <button className="menuItem"
+              onClick={() => setstate(id)}
+              style={{
+              backgroundColor:
+              state === id ? "#4986ff" : "#f2f7ff",
+              color: state === id ? "#ffffff" : "#666666"
+              }}>
+                {collection.type}
+            </button>
           );
         })}
       </div>
-      <GameCard items ={foundGameCard.items}/>
-
-    </div>
-  )
-}
-
-function GameCard({items}){
-  const [modal,setModal] = useState(false)
-  return(
-    <div className="gameImg">
-      {items.map((item) => {
-        return (
-          <div className = "gameCard">
-            <img {...item.image} onClick={() => setModal(true)}/>
-            <p className="play-text">Play</p>
-            <p>{item.name}</p>
-            <Modal image={item.image} modal = {modal} setModal ={setModal} />
-          </div>  
-        );
-      })}
-    </div>
-  )
-}
-
-function Modal({image, modal, setModal}){
-  return(
-    <div className="gamePopup" style={{display:modal?  "block" :"none"}} >
-      <div className="box">
-        <div className="popImg">
-          <img {...image}/>
-        </div>
-   
-          <button type="button">
-            <a href="" target="_blank">Play</a>
-          </button>
+      <div className="gameImg">
+        {foundGameCard.items.map((item,i) => {
+          return <GameCard card ={item} collection={collections}/>
+        })}
       </div>
+
     </div>
   )
 }
-
-function Button({title, myMenu}) {
-  return <button type="button" className="menuItem" onClick= {myMenu}>{title}</button>;
-}
-
-
-     {/* <div className="popText">
-          <div className="gameTitle">
-            <h3>{item.name}</h3>
-            <p>{menu.name}</p>
-          </div>
-          <div className="gameInfo">
-            <p>:{item.dateInfo}</p>
-            <p>:{item.playerInfo}</p>
-            <p>:{item.developerInfo}</p>
-          </div> */}
-
-
