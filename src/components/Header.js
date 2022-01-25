@@ -10,8 +10,8 @@ export function Navbar({logo,navItems}) {
 
         <div className="nav">
           <ul>
-            {navItems.map((Item)=>
-              <li className="navItem">
+            {navItems.map((Item,id)=>
+              <li className="navItem" key={id}>
                 <a href = {Item.url}>
                   {Item.item}
                 </a>

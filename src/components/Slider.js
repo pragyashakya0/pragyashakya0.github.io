@@ -16,7 +16,7 @@ export function Slider({images,text}){
       {images.map((image,id)=>{
         const display = index === id ? "block": "none";
         return(
-          <div className='slideshow'>
+          <div className='slideshow' key={id}>
             <img 
             src={image.src} 
             alt ={image.name}

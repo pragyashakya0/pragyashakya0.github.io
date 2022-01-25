@@ -3,9 +3,9 @@ export function Footer({footerItems, footerText}){
     <div className='footer'>
       <div className='links'>
         <ul>
-          {footerItems.map((item) => {
+          {footerItems.map((item,id) => {
             return(
-              <li className='item'>
+              <li className='item' key={id}>
                 <a href={item.url} target="_blank">
                   <img src={item.image} alt={item.name}/>
                 </a>

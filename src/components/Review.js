@@ -13,30 +13,40 @@ export function Review({testimonials,title,rating}){
   },[]);
   return (
     <div className = 'testimonialreview'>
-      <h2>{title}</h2>   
-      <div className="reviewslideshow">
-        {testimonials.map((test,id) => {
-          const display = index === id ? "block" : "none"
-          return(
-            <div className='reviewslides' style={{display}}>
-              <div className='reviewImg'>
-                <img src={test.image.src} alt={test.image.name} />
-              </div>
-              
-              <div className='reviewtext'>
-                <p className="reviewname">{test.image.name}</p>
-                 {[...Array(test.rating)].map((e, i) => {
-                   return <img src = {rating.src}/>
-                   })}
-                <p>{test.reviewtitle}</p>
-                <p>{test.review}</p>
-              </div>
-            </div>
-          );
-        })}
-      </div>    
+      <h2>{title}</h2> 
+      <Testslides testimonials={testimonials} rating={rating} index={index}/>   
       <Dot slides = {testimonials} index={index} setIndex ={setIndex}/>
     </div>
   );
 }
 
+function Testslides({testimonials,rating,index}){
+  return(
+  <div className="reviewslideshow">
+    {testimonials.map((test,id) => {
+    const display = index === id ? "block" : "none"
+      return(
+        <div className='reviewslides' style={{display}} key={id}>
+          <div className='reviewImg'>
+            <img src={test.image.src} alt={test.image.name} />
+          </div>      
+          <Rating test ={test} rating={rating}/>
+        </div>
+      );
+    })}
+  </div>
+  )
+}
+
+function Rating({test,rating}){
+  return(
+    <div className='reviewtext'>
+      <p className="reviewname">{test.image.name}</p>
+      {[...Array(test.rating)].map((e, i) => {
+        return <img src = {rating.src} key={i}/>
+      })}
+      <p>{test.reviewtitle}</p>
+      <p>{test.review}</p>
+    </div>
+  )
+}

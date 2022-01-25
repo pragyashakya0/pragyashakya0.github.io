@@ -5,7 +5,6 @@ import { Subscribe } from "./Subscribe";
 export function Update({info, forms, submit}){
   const [state,setState] = useState(false);
   const display = !state ? "flex":"none";
-  console.log(state);
   return(
     <div className="update" id="update">
       <div className="newsletter">
