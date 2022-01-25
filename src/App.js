@@ -1,33 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
-import { Header } from './components';
+import { Navbar } from './components';
 import { Slider } from './components';
 import { GameCard } from './components';
-import { gameList } from './data.js';
+import { About } from './components';
+import { Review } from './components';
+import { Footer } from './components';
+import { gameList, about, testimonials } from './data.js';
+
 
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <header>
+        <Navbar />
+      </header>
       <Slider />
       <GameCard games = { gameList }/>
-     
-     
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <section className='about' id="about">
+        <About about = { about } />
+        <Review testimonials = { testimonials.testimonial } title={testimonials.title}/>
+      </section>
+      <Footer />
+       
     </div>
   );
 }
