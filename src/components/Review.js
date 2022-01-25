@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
+import { Dot } from './Dot';
 
-export function Review({testimonials,title}){
+export function Review({testimonials,title,rating}){
   const [index, setIndex] = useState(0);
   useEffect(()=> {
     const timer = setInterval(()=>{
@@ -12,36 +13,29 @@ export function Review({testimonials,title}){
   },[]);
   return (
     <div className = 'testimonialreview'>
-      <h2>{title}</h2>
-      
+      <h2>{title}</h2>   
       <div className="reviewslideshow">
         {testimonials.map((test,id) => {
+          const display = index === id ? "block" : "none"
           return(
-            <div className='reviewslides' style={{display: index === id ? "block" : "none"}}>
+            <div className='reviewslides' style={{display}}>
               <div className='reviewImg'>
                 <img src={test.image.src} alt={test.image.name} />
               </div>
               
               <div className='reviewtext'>
                 <p className="reviewname">{test.image.name}</p>
+                 {[...Array(test.rating)].map((e, i) => {
+                   return <img src = {rating.src}/>
+                   })}
                 <p>{test.reviewtitle}</p>
                 <p>{test.review}</p>
               </div>
             </div>
           );
         })}
-      </div>
-
-      <div className='dot'>
-        {testimonials.map((test,id)=>{
-          return(
-            <span className='dotItem'  
-              onClick={() => setIndex(id)} 
-              style={{ backgroundColor : index === id ? "blue" : "grey" }}>
-            </span>
-          );
-        })}
-      </div>
+      </div>    
+      <Dot slides = {testimonials} index={index} setIndex ={setIndex}/>
     </div>
   );
 }

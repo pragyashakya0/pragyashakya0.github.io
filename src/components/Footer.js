@@ -1,4 +1,4 @@
-export function Footer({footerItems}){
+export function Footer({footerItems, footerText}){
   return(
     <div className='footer'>
       <div className='links'>
@@ -15,7 +15,7 @@ export function Footer({footerItems}){
         </ul>
       </div>
       <div className='footer-text'>
-        Developed By:
+        {footerText.text}{footerText.name}
       </div>
     </div>
   )

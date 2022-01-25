@@ -6,40 +6,48 @@ export function Modal({
   setModal, 
   releaseDate, 
   developerInfo, 
-  playerInfo
-}){
+  players,
+  close
+})
+{
   return modal ? (
     <div className="gamePopup"
-      onClick={() => {
-          setModal(false)
-        }}
+      // onClick={() => {
+      //     setModal(true)
+      //   }}
     >
-      <div className="box" 
-        onclick = {e => {
-          e.stopPropagation();
-        }}
-      >
+      <div className="box">
         <div className="popImg">
-          <img {...image}/>
+          <img src={image} alt = {name}/>
         </div>
+
         <div className="popText">
           <div className="gameTitle">
             <h3>{name}</h3>
             <p>{gametype}</p>
           </div>
+
           <div className="gameInfo">
+            {releaseDate ? (
             <p><b>NES release date:</b>{releaseDate}</p>
-            <p><b>Number of players:</b>{playerInfo}</p>
+            ):null}
+            {players ? (
+            <p><b>No. of Players:</b>{players}</p>
+            ):null}
+            {developerInfo?(
             <p><b>Developer:</b>{developerInfo}</p>
+            ):null}
           </div>
-        </div>
-        <button type="button">
+
+          <button type="button">
             <a href="" target="_blank">Play Game</a>
-        </button>
-        <div onClick={() => setModal(false)}>
-          <span className="close">&times;</span>
+          </button>
+        </div>
+
+        <div>
+          <img className="close" src={close.src} alt={close.name} onClick={() => setModal(false)}/>
         </div>
       </div>
     </div>
-  ) : null;
+  ): null;
 }

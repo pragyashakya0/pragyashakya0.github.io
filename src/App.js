@@ -12,10 +12,11 @@ import {
   sliderImages,
   sliderText,
   games,
+  close,
   about, 
   testimonials,
   newsletter,
-  footerItems
+  footer
 } from './data.js';
 
 
@@ -25,11 +26,11 @@ function App() {
     <div className="App">
       <Navbar logo={logo} navItems={navItems}/>
       <Slider images={sliderImages} text={sliderText} />
-      <Games collections={games}/>
+      <Games collections={games} close={close}/>
       <About about={about}/>
-      <Review testimonials={testimonials.testimonial} title={testimonials.title}/>
+      <Review testimonials={testimonials.testimonial} title={testimonials.title} rating={testimonials.rating}/>
       <Update info={newsletter} forms={newsletter.form} submit={newsletter.submit}/>
-      <Footer footerItems={footerItems}/>
+      <Footer footerItems={footer.items} footerText={footer.text}/>
        
     </div>
   );

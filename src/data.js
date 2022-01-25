@@ -10,11 +10,14 @@ import duckhunt from './img/duckhunt.png';
 import zelda from './img/zelda.png';
 import megaman from './img/megaman.png';
 import flyingmario from './img/pixalatedmario.png';
+import closeicon from './img/closevector.png';
 import person1 from './img/person1.png';
 import person2 from './img/person2.png';
 import person3 from './img/person3.png';
+import rating from './img/star.png';
 import humanicon from './img/personvector.png';
 import emailicon from './img/emailvector.png';
+import done from './img/donevector.png'
 import facebook from './img/vector1.png';
 import instagram from './img/vector2.png';
 import twitter from './img/vector3.png';
@@ -22,7 +25,8 @@ import twitter from './img/vector3.png';
 
 export const logo = {
   src: logoimg,
-  name: "8-bit-games" 
+  name: "8-bit-games",
+  url: "index.js" 
 }
 
 export const navItems = [
@@ -63,86 +67,6 @@ export const sliderText = {
   subtitle: "Play a number of Nintendo 64 classic games"
 }
 
-// export const gameTypes = [
-//   {
-//     id:0,
-//     name: "All Games"
-//   },
-//   {
-//     id:1,
-//     name: "Adventure"
-//   },
-//   {
-//     id:2,
-//     name: "Action"
-//   },
-//   {
-//     id:3,
-//     name: "Arcade"
-//   },
-//   {
-//     id:4,
-//     name: "Sports"
-//   },
-//   {
-//     id:5,
-//     name: "Strategy"
-//   }
-// ]
-
-// export const gameList = 
-// [
-//     {
-//       id:0,
-//       image:mario,
-//       name:"Super Mario",
-//       category:"Adventure",
-//       dateInfo:"October 1985",
-//       playerInfo: 2,
-//       developerInfo:"Nintendo"
-//     },
-
-//     {
-      // id:1,
-      // image:excitebike,
-      // name:"Excite Bike",
-      // category:"Action"
-//     },
-
-//     { 
-//       id:2,
-//       image:pacman,
-//       name:"Pacman",
-//       category:"Strategy"
-//     },
-//     {
-//       id:3,
-//       image: castlevania,
-//       name: "Castlevania",
-//       category:"Arcade"
-//     },
-//     {
-//       id:4,
-//       image: duckhunt,
-//       name: "Duck Hunt",
-//       category:"Sports"
-//     },
-//     {
-//       id:5,
-//       image: zelda,
-//       name: "The Legend of Zelda",
-//       category:"Arcade"
-
-//     },
-//     {
-//       id:6,
-//       image: megaman,
-//       name: "Mega Man",
-//       category:"Strategy"
-//     }
-// ];
-
-
 export const about = {
   title: "About 8-bit Games",
   description: "8-Bit games provides free retro games on-site for everyone to play.Bringing back nostalgic memories of NES classic games online",
@@ -154,6 +78,10 @@ export const about = {
 
 export const testimonials = {
   title:"Loved by Everyone",
+  rating:{
+    src: rating,
+    name: "rating"
+  },
   testimonial:[
     {
       id:0,
@@ -188,7 +116,6 @@ export const testimonials = {
   ]
 }
 
-
 export const newsletter = {
   title:"Subscribe to our newsletter",
   subtitle:"and receive updates on new game uploads",
@@ -206,32 +133,46 @@ export const newsletter = {
   ],
   buttonText:"Subscribe",
   submit:{
+    image:{
+      src: done,
+      alt:"done"
+    },
     title:"Thank You",
     subtext: "You are now subscribed to newsletter."
   }
 }
 
-export const footerItems = [
-  {
-    image:facebook,
-    url:"https://www.facebook.com",
-    name:"facebook"
+export const footer = {
+  text:{
+    text: "Developed by: ",
+    name: "Pragya Shakya"
   },
-  {
-    image:instagram,
-    url:"https://www.instagram.com",
-    name:"instagram"
-  },
-  {
-    image:twitter,
-    url:"https://twitter.com",
-    name:"twitter"
-  }
-]
+  items:[
+    {
+      image:facebook,
+      url:"https://www.facebook.com",
+      name:"facebook"
+    },
+    {
+      image:instagram,
+      url:"https://www.instagram.com",
+      name:"instagram"
+    },
+    {
+      image:twitter,
+      url:"https://twitter.com",
+      name:"twitter"
+    }
+  ]
+}
 
+export const close = {
+  src: closeicon,
+  name: "close"
+}
 
 export const games = [
-   {
+  {
     id: 0,
     type: "All Games",
     items: [
@@ -243,7 +184,7 @@ export const games = [
         },
         releaseDate: "January 1985",
         developer: "Nintendo",
-        numofPlayers: 2
+        players: 2
       },
       {
         name:"Excite Bike",
@@ -253,7 +194,7 @@ export const games = [
         },
         releaseDate: "January 1985",
         developer: "Nintendo",
-        numofPlayers: 2
+        players: 2,        
       },
       {
         name: "Pacman",
@@ -261,9 +202,9 @@ export const games = [
           src: pacman,
           alt: "Pacman"
         },
-        releaseDate: "January 1985",
-        developer: "Nintendo",
-        numofPlayers: 2
+        releaseDate: "May 1980",
+        developer: "Namco",
+        players: 3
       },
       {
         name: "Castlevania",
@@ -273,7 +214,7 @@ export const games = [
         },
         releaseDate: "January 1985",
         developer: "Nintendo",
-        numofPlayers: 2
+        players: 2
       },
       {
         name: "Duck Hunt",
@@ -283,7 +224,7 @@ export const games = [
         },
         releaseDate: "January 1985",
         developer: "Nintendo",
-        numofPlayers: 2
+        players: 2
       },
       {
         name: "The Legend of Zelda",
@@ -293,7 +234,7 @@ export const games = [
         },
         releaseDate: "January 1985",
         developer: "Nintendo",
-        numofPlayers: 2
+        players: 2
       },
       {
         name:"Mega Man",
@@ -301,9 +242,9 @@ export const games = [
           src:megaman,
           alt:"Mega Man"
         },
-        releaseDate: "January 1985",
-        developer: "Nintendo",
-        numofPlayers: 2
+        releaseDate: "December 1987",
+        developer: "Capcom",
+        players: 1
       }
     ]
   },
@@ -319,7 +260,7 @@ export const games = [
         },
         releaseDate: "January 1985",
         developer: "Nintendo",
-        numofPlayers: 2
+        players: 2
       },
       {
         name: "Pacman",
@@ -327,9 +268,9 @@ export const games = [
           src: pacman,
           alt: "Pacman"
         },
-        releaseDate: "January 1985",
+        releaseDate: "May 1980",
         developer: "Nintendo",
-        numofPlayers: 2
+        players: 2
       }
     ]
   },
@@ -345,7 +286,7 @@ export const games = [
         },
         releaseDate: "January 1985",
         developer: "Nintendo",
-        numofPlayers: 2
+        players: 2
       },
       {
         name: "The Legend of Zelda",
@@ -355,7 +296,7 @@ export const games = [
         },
         releaseDate: "January 1985",
         developer: "Nintendo",
-        numofPlayers: 2
+        players: 2
       }
     ]
   },
@@ -369,9 +310,9 @@ export const games = [
           src: megaman,
           alt:"Megaman"
         },
-        releaseDate: "January 1985",
-        developer: "Nintendo",
-        numofPlayers: 2
+        releaseDate: "December 1987",
+        developer: "Capcom",
+        players: 1
       },
       {
         name: "Duck Hunt",
@@ -381,7 +322,7 @@ export const games = [
         },
         releaseDate: "January 1985",
         developer: "Nintendo",
-        numofPlayers: 2
+        players: 2
       }
     ]
   },
@@ -395,9 +336,9 @@ export const games = [
           src: pacman,
           alt:"Pacman"
         },
-        releaseDate: "January 1985",
-        developer: "Nintendo",
-        numofPlayers: 2
+        releaseDate: "May 1980",
+        developer: "Namco",
+        players: 2
       },
       {
         name: "Castlevania",
@@ -407,7 +348,7 @@ export const games = [
         },
         releaseDate: "January 1985",
         developer: "Nintendo",
-        numofPlayers: 2
+        players: 2
       }
     ]
   },
@@ -421,9 +362,9 @@ export const games = [
           src: megaman,
           alt:"Megaman"
         },
-        releaseDate: "January 1985",
-        developer: "Nintendo",
-        numofPlayers: 2
+        releaseDate: "December 1987",
+        developer: "Capcom",
+        players: 1
       },
       {
         name: "Duck Hunt",
@@ -433,7 +374,7 @@ export const games = [
         },
         releaseDate: "January 1985",
         developer: "Nintendo",
-        numofPlayers: 2
+        players: 2
       }
     ]
   }

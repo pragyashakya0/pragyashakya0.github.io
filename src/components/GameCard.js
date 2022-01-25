@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Modal } from './Modal'
 
-export function GameCard({card,collection}){
+export function GameCard({card,collection,close}){
   const [modal,setModal] = useState(false)
   return(
     <div className = "gameCard">
-      <img {...card.image}
+      <img src={card.image.src} alt= {card.name}
         onClick={() => {
           setModal(true)
         }}
@@ -15,12 +15,13 @@ export function GameCard({card,collection}){
       <Modal 
         name= {card.name}
         gametype={collection.type}
-        image={card.image} 
+        image={card.image.src}
         modal = {modal}
         setModal ={setModal} 
         releaseDate={card.releaseDate}
         developerInfo={card.developer}
-        playersInfo={card.numOfPlayers}
+        players={card.players}
+        close={close}
       />
     </div>  
   )

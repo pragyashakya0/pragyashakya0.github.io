@@ -3,7 +3,7 @@ export function Navbar({logo,navItems}) {
     <header>
       <div className="navbar">
         <div className="logo">
-          <a href = "#index.html" >
+          <a href = {logo.url} >
             <img src= {logo.src} alt ={logo.name}/>
           </a>
         </div>

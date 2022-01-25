@@ -1,24 +1,20 @@
+import { useState } from "react"
+import { Form } from './Form'
+import { Subscribe } from "./Subscribe";
+
 export function Update({info, forms, submit}){
+  const [state,setState] = useState(false);
+  const display = !state ? "flex":"none";
+  console.log(state);
   return(
-    <div className="update">
+    <div className="update" id="update">
       <div className="newsletter">
         <h1>{info.title}</h1>
         <p>{info.subtitle}</p>
-        <form className="form">
-          {forms.map((form) => 
-          <div className="input-icons">
-            <img className="iconInput" src={form.icon}/>
-            <input type={form.type}  name="name" className ="input" placeholder={form.text}/>
-          </div>
-          )}
-           <button type="button" className ="btn" name="submit" onclick="subscribe()">{info.buttonText}</button>
-        </form>
+        <Form display={display} forms={forms} setState={setState} info={info}/>
       </div>
-      <div className="subscribe">
-        <img src="img/donevector.png"/>
-        <p>{submit.title}</p>
-        <p>{submit.subtext}</p>
-      </div>
+      <Subscribe submit= {submit} state={state}/>
     </div>
   )
 }
+
