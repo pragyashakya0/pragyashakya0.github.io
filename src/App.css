@@ -164,10 +164,6 @@ header {
   border-radius: 10px;
 }
 
-.gameCard p {
-  text-align: center;
-}
-
 .play-text {
   color: white;
   font-size: 20px;
@@ -197,9 +193,10 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 2;
+  z-index: 6;
   background-color: rgba(211, 91, 91, 0.1);
   cursor: pointer;
+  position: relative;
 }
 
 .box {
@@ -211,7 +208,7 @@ header {
   transform: translate(-50%, -50%);
   border: 2px solid rgb(158, 135, 135);
   border-radius: 10px;
-  column-gap: 20px;
+  column-gap: 40px;
   padding: 10px;
   width: 1000px;
   height: 440px;
@@ -273,6 +270,7 @@ header {
 }
 
 .close {
+  padding-left: 40px;
   font-size: 30px;
   color: rgb(172, 45, 45);
 }
