@@ -1,52 +1,28 @@
-const gameTypes = [
-  {
-    id:0,
-    name: "All Games"
-  },
-  {
-    id:1,
-    name: "Adventure"
-  },
-  {
-    name: "Action"
-  },
-  {
-    name: "Arcade"
-  },
-  {
-    name: "Sports"
-  },
-  {
-    name: "Strategy"
-  }
-]
+import { useState } from "react";
+import { Modal } from './Modal'
 
-export function GameCard({games}){
-  return ( 
-    <div className='games' id="games">
-      <h2>All the retro games in one place</h2>
-
-      <div className = 'gameMenu'>
-        {gameTypes.map((menu) => {
-          return (
-            <button type='button' className='menuItem'>{menu.name}</button>
-          )
-        })}
-      </div>
-
-      <div className='gameImg'>
-        {games.map((game) => {
-          return (
-          <div className = "gameCard">
-            <img src = {game.image} 
-            id = {game.id} 
-            alt = {game.name}
-            />
-            <p>{game.name}</p>
-          </div>
-          );
-          })}
-      </div>
-    </div>
-  );
+export function GameCard({card,collection,close}){
+  const [modal,setModal] = useState(false)
+  return(
+    <div className = "gameCard">
+      <img src={card.image.src} alt= {card.name}
+        onClick={() => {
+          setModal(true)
+        }}
+      />
+      <p className="play-text">Play</p>
+      <p>{card.name}</p>
+      <Modal 
+        name= {card.name}
+        gametype={collection.type}
+        image={card.image.src}
+        modal = {modal}
+        setModal ={setModal} 
+        releaseDate={card.releaseDate}
+        developerInfo={card.developer}
+        players={card.players}
+        close={close}
+      />
+    </div>  
+  )
 }
