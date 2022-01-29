@@ -161,7 +161,13 @@ header {
 }
 
 .gameCard img {
-  border-radius: 10px;
+  width: 275px;
+  height: 190px;
+  top: 10%;
+  bottom: 10%;
+  right: -5%;
+  left: -5%;
+  border-radius: 5% / 50%;
 }
 
 .play-text {
